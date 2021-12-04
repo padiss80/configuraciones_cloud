@@ -1,0 +1,14 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+server:
+  port: 8090
+zuul:
+  routes:
+      serv-productos: # Definición servicio 1
+        path: /sproductos/** #path asociado a servicio 1
+        serviceId: servicio-productos
+      serv-pedidos: # Definición servicio 2
+        path: /spedidos/** # path asociado a servicio 2
+        serviceId: servicio-pedidos
